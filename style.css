@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;400;500;600;700;800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Stick No Bills", sans-serif;
+  font-family: "Tajawal", sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0);
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  margin: auto;
+  width: 75%;
+  display: flex;
+}
+
+.text-side {
+  padding-left: 120px;
+  font-size: 120px;
+  font-weight: 900;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  transition: transform 0.7s;
+}
+a:nth-child(3) {
+  color: rgb(252, 2, 2);
+}
+
+a:hover {
+  text-align: center;
+  transform: translateX(20px);
+}
+
+.greeting,
+.intro,
+.name {
+  width: 55%;
+}
+
+.links {
+  position: relative;
+  left: -500px;
+}
+
+.image-side {
+  margin-top: 50px;
+  width: 40%;
+  border-radius: 50px;
+}
+
+img {
+  margin-top: 50px;
+  height: 1000px;
+  width: 600px;
+  border-radius: 300px;
+}
+
+img:hover {
+  transform: rotate(-20deg);
+}
+
+hr {
+  position: relative;
+  top: 30px;
+  width: 0px;
+  transition: width 2s ease;
+}
+
+.vertical-line {
+  transform: rotate(90deg);
+}
