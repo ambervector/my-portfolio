@@ -5,6 +5,7 @@ const h1 = document.querySelector("h1");
 const aboutDescription = document.querySelector(".about-description");
 const horizontalLine = document.querySelector(".horizontal-line");
 const verticalLine = document.querySelector(".vertical-line");
+const imageDiv = document.querySelector(".profile-picture");
 
 window.addEventListener("load", function () {
   h1.style.transition = "all 2s ease";
@@ -25,7 +26,7 @@ const revealSection = function (entries, observer) {
   entry.target.style.opacity = "1";
   entry.target.style.top = "0px";
   entry.target.style.transition = "all 2s ease";
-  observer.unobserve(entries.target);
+  observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
@@ -49,3 +50,17 @@ sectionObserver.observe(aboutDescription);
 // homeLink.addEventListener("mouseout", function () {
 //   homeSpan.style.right = "-150px";
 // });
+
+const revealImage = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.style.opacity = "1";
+  observer.unobserve(entry.target);
+};
+
+const imageobserver = new IntersectionObserver(revealImage, {
+  root: null,
+  threshold: 0.4,
+});
+
+imageobserver.observe(imageDiv);
