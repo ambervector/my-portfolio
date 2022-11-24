@@ -143,11 +143,14 @@ p {
 }
 
 .react-projects {
-  position: relative;
-  right: -1200px;
   margin-bottom: 100px;
-  transition: right 2s ease;
 }
+
+#react-heading {
+  opacity: 0;
+  /* transition: opacity 3s ease; */
+}
+
 p.footer--text {
   color: rgb(255, 0, 0);
   font-size: 80px;

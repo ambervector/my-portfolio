@@ -10,9 +10,9 @@ const workLinks = document.querySelectorAll(".work-link");
 const horizontalLine = document.querySelector(".horizontal-line");
 const verticalLine = document.querySelector(".vertical-line");
 const htmlCssJsSectionHeading = document.querySelector(".heading");
-const reactProjectHeading = document.querySelector(".react-projects");
+const reactProjectHeading = document.querySelector("#react-heading");
 
-// console.log(workLinks);
+// tranlating the work links on hover and vice versa
 workLinks.forEach((link) => {
   link.addEventListener("mouseenter", function () {
     link.style.transform = "translateX(20px)";
@@ -23,54 +23,7 @@ workLinks.forEach((link) => {
   });
 });
 
-// const works = [
-//   {
-//     title: "Title1",
-//     oneLineDes: "One line description",
-//     detailedDes:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in ex neque. Quisque interdum ut lectus quis porta. Vivamus sit amet diam consectetur, congue purus ac, dignissim enim. Nulla pretium aliquet risus, at pharetra ex vestibulum vel. Nulla rhoncus efficitur ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pretium quam sed tortor feugiat commodo. Ut feugiat mi tempor purus malesuada, non aliquet ante laoreet. Nullam dictum eu sapien ut rhoncus.",
-//   },
-
-//   {
-//     title: "Title2",
-//     oneLineDes: "One line description",
-//     detailedDes:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in ex neque. Quisque interdum ut lectus quis porta. Vivamus sit amet diam consectetur, congue purus ac, dignissim enim. Nulla pretium aliquet risus, at pharetra ex vestibulum vel. Nulla rhoncus efficitur ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pretium quam sed tortor feugiat commodo. Ut feugiat mi tempor purus malesuada, non aliquet ante laoreet. Nullam dictum eu sapien ut rhoncus.",
-//   },
-
-//   {
-//     title: "Title3",
-//     oneLineDes: "One line description",
-//     detailedDes:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in ex neque. Quisque interdum ut lectus quis porta. Vivamus sit amet diam consectetur, congue purus ac, dignissim enim. Nulla pretium aliquet risus, at pharetra ex vestibulum vel. Nulla rhoncus efficitur ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pretium quam sed tortor feugiat commodo. Ut feugiat mi tempor purus malesuada, non aliquet ante laoreet. Nullam dictum eu sapien ut rhoncus.",
-//   },
-
-//   {
-//     title: "Title4",
-//     oneLineDes: "One line description",
-//     detailedDes:
-//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in ex neque. Quisque interdum ut lectus quis porta. Vivamus sit amet diam consectetur, congue purus ac, dignissim enim. Nulla pretium aliquet risus, at pharetra ex vestibulum vel. Nulla rhoncus efficitur ullamcorper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec pretium quam sed tortor feugiat commodo. Ut feugiat mi tempor purus malesuada, non aliquet ante laoreet. Nullam dictum eu sapien ut rhoncus.",
-//   },
-// ];
-// const replaceContent = function (work) {
-//   workTitle.textContent = works.title;
-//   workOneLine.textContent = works.oneLineDes;
-//   workDetailedInfo.textContent = works.detailedDes;
-// };
-
-// works.forEach((work) => {
-//   replaceContent(work);
-// });
-
-// replaceContent();
-// worksList.addEventListener("mouseover", function () {
-//   firstWork.style.transform = "translateX(50px)";
-// });
-
-// worksList.addEventListener("mouseleave", function () {
-//   firstWork.style.transform = "translateX(0px)";
-// });
-
+// Transformations on page load
 window.addEventListener("load", function () {
   homeSpan.style.right = "0px";
   horizontalLine.style.width = "90vw";
@@ -80,10 +33,10 @@ window.addEventListener("load", function () {
   verticalLine.style.transformOrigin = "10% 0%";
 
   htmlCssJsSectionHeading.style.left = "0px";
-  reactProjectHeading.style.right = "0px";
 });
 
-const revealSection = function (entries, observer) {
+// Intersection Observer for the Footer
+const revealFooter = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
   entry.target.style.opacity = "1";
@@ -92,9 +45,26 @@ const revealSection = function (entries, observer) {
   observer.unobserve(entries.target);
 };
 
-const forMoreObserver = new IntersectionObserver(revealSection, {
+const footerObserver = new IntersectionObserver(revealFooter, {
   root: null,
   threshold: 0,
 });
 
-forMoreObserver.observe(footer);
+footerObserver.observe(footer);
+
+// Intersection Observer for the React Heading
+
+const revealReactHeading = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.style.opacity = "1";
+  entry.target.style.transition = "all 3s ease";
+  observer.unobserve(entries.target);
+};
+
+const reactHeadingObserver = new IntersectionObserver(revealReactHeading, {
+  root: null,
+  threshold: 0,
+});
+
+reactHeadingObserver.observe(reactProjectHeading);
