@@ -20,8 +20,19 @@ body {
   width: 65%;
   display: flex;
 }
+
+.html-css-js {
+  margin-top: 100px;
+}
+
+.heading {
+  position: relative;
+  left: -1200px;
+  margin-bottom: 200px;
+  transition: left 2s ease;
+}
 .hero {
-  height: 30vh;
+  height: 15vh;
 }
 
 .header {
@@ -122,14 +133,22 @@ p {
   font-size: 40px;
 }
 
-.for-more {
+.footer {
+  opacity: 0;
   margin-bottom: 40px;
 }
 
 .hidden {
   opacity: 0;
 }
-p.for-more--text {
+
+.react-projects {
+  position: relative;
+  right: -1200px;
+  margin-bottom: 100px;
+  transition: right 2s ease;
+}
+p.footer--text {
   color: rgb(255, 0, 0);
   font-size: 80px;
 }
@@ -154,4 +173,10 @@ hr {
 
 .vertical-line {
   transform: rotate(90deg);
+}
+
+.footer-hr {
+  top: -50px;
+  width: 70vw;
+  margin: auto;
 }

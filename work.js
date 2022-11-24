@@ -5,10 +5,12 @@ const firstWork = document.querySelector(".work");
 const workTitle = document.querySelector(".work-title");
 const workOneLine = document.querySelector(".work-one-line-des");
 const workDetailedInfo = document.querySelector(".detailed-info");
-const forMore = document.querySelector(".for-more");
+const footer = document.querySelector(".footer");
 const workLinks = document.querySelectorAll(".work-link");
 const horizontalLine = document.querySelector(".horizontal-line");
 const verticalLine = document.querySelector(".vertical-line");
+const htmlCssJsSectionHeading = document.querySelector(".heading");
+const reactProjectHeading = document.querySelector(".react-projects");
 
 // console.log(workLinks);
 workLinks.forEach((link) => {
@@ -76,6 +78,9 @@ window.addEventListener("load", function () {
 
   verticalLine.style.transform = "rotate(90deg)";
   verticalLine.style.transformOrigin = "10% 0%";
+
+  htmlCssJsSectionHeading.style.left = "0px";
+  reactProjectHeading.style.right = "0px";
 });
 
 const revealSection = function (entries, observer) {
@@ -83,7 +88,7 @@ const revealSection = function (entries, observer) {
   if (!entry.isIntersecting) return;
   entry.target.style.opacity = "1";
 
-  entry.target.style.transition = "all 2s ease";
+  entry.target.style.transition = "all 3s ease";
   observer.unobserve(entries.target);
 };
 
@@ -92,4 +97,4 @@ const forMoreObserver = new IntersectionObserver(revealSection, {
   threshold: 0,
 });
 
-forMoreObserver.observe(forMore);
+forMoreObserver.observe(footer);
