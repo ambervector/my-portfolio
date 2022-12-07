@@ -19,7 +19,7 @@ window.addEventListener("load", function () {
   linksElement.style.left = "0";
   linksElement.style.fontSize = "90px";
   horizontalLine.style.width = "90vw";
-  verticalLine.style.width = "550px";
+  verticalLine.style.width = "90vh";
 
   verticalLine.style.transform = "rotate(90deg)";
   verticalLine.style.transformOrigin = "10% 0%";

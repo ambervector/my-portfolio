@@ -13,7 +13,8 @@ window.addEventListener("load", function () {
   h1.style.right = "0";
   homeSpan.style.right = "0px";
   horizontalLine.style.width = "90vw";
-  verticalLine.style.width = "550px";
+  verticalLine.style.width = "90vh";
+
 
   verticalLine.style.transform = "rotate(90deg)";
   verticalLine.style.transformOrigin = "10% 0%";
