@@ -5,9 +5,11 @@
   padding: 0;
   font-family: "Stick No Bills", sans-serif;
   font-family: "Tajawal", sans-serif;
+  font-size: 62.5%;
 }
 
 body {
+
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0);
@@ -23,8 +25,8 @@ body {
 }
 
 .text-side {
-  padding-left: 120px;
-  font-size: 120px;
+  padding-left: 12rem;
+  font-size: 20rem;
   font-weight: 900;
   width: 80%;
   display: flex;
@@ -44,31 +46,32 @@ a:nth-child(3) {
 
 a:hover {
   text-align: center;
-  transform: translateX(20px);
+  transform: translateX(2rem);
 }
 
 .greeting,
 .intro,
 .name {
+  font-size: 9rem;
   width: 55%;
 }
 
 .links {
   position: relative;
-  left: -500px;
+  left: -50rem;
 }
 
 .image-side {
-  margin-top: 50px;
+  margin-top: 5rem;
   width: 40%;
-  border-radius: 50px;
+  border-radius: 5rem;
 }
 
 img {
-  margin-top: 50px;
-  height: 1000px;
-  width: 600px;
-  border-radius: 300px;
+  margin-top: 5rem;
+  height: 100rem;
+  width: 60rem;
+  border-radius: 30rem;
 }
 
 img:hover {
@@ -77,8 +80,8 @@ img:hover {
 
 hr {
   position: relative;
-  top: 30px;
-  width: 0px;
+  top: 3rem;
+  width: 0;
   transition: width 2s ease;
 }
 

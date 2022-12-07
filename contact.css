@@ -5,6 +5,7 @@
   padding: 0;
   font-family: "Stick No Bills", sans-serif;
   font-family: "Tajawal", sans-serif;
+  font-size: 62.5%;
 }
 
 body {
@@ -27,8 +28,8 @@ body {
 }
 
 h1 {
-  padding-top: 160px;
-  font-size: 150px;
+  padding-top: 16rem;
+  font-size: 15rem;
 }
 
 a {
@@ -37,27 +38,29 @@ a {
 }
 .header a {
   color: rgb(255, 255, 255);
-  font-size: 25px;
+  font-size: 2.5rem;
   position: fixed;
-  top: 80px;
-  right: 80px;
+  top: 8rem;
+  right: 8rem;
 }
 
 .home-word {
   color: red;
   position: relative;
-  right: -150px;
+  right: -15rem;
   transition: right 1s ease;
+  font-size: 2.5rem;
+
 }
 
 .words {
-  margin-top: 200px;
+  margin-top: 20rem;
   height: 70vh;
   /* background-color: rgb(78, 78, 78); */
 }
 
 .words p {
-  font-size: 100px;
+  font-size: 10rem;
   font-weight: 900;
 }
 
@@ -69,52 +72,61 @@ a {
 }
 
 h2 {
-  font-size: 50px;
-  margin-bottom: 50px;
+  font-size: 5rem;
+  margin-bottom: 5rem;
 }
 
 .description {
-  width: 700px;
-  margin-bottom: 20px;
-  font-size: 20px;
+  width: 70rem;
+  margin-bottom: 2rem;
   font-weight: bold;
 }
 
 .description p {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+
 }
 .heading {
   position: relative;
-  right: 1300px;
+  right: 130rem;
   transition: right 2s ease;
 }
 
 .contact-section__end {
   opacity: 0;
-  font-size: 20px;
   color: red;
   text-decoration: none;
-  height: 1auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  margin-bottom: 3rem;
 }
 .contact-section__end p,
 .contact-section__end a {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
+
 .contact-section__end p {
-  width: 250px;
+  width: 25rem;
 }
 
 hr {
   position: relative;
-  top: 30px;
-  width: 0px;
+  top: 3rem;
+  width: 0;
   transition: width 2s ease;
 }
 
 .vertical-line {
   transform: rotate(90deg);
+}
+
+
+.margin {
+  min-height: 5rem;
+  background-color: black;
 }

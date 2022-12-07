@@ -5,6 +5,7 @@
   padding: 0;
   font-family: "Stick No Bills", sans-serif;
   font-family: "Tajawal", sans-serif;
+  font-size: 62.5%;
 }
 
 body {
@@ -22,13 +23,13 @@ body {
 }
 
 .html-css-js {
-  margin-top: 100px;
+  margin-top: 10rem;
 }
 
 .heading {
   position: relative;
-  left: -1200px;
-  margin-bottom: 200px;
+  left: -120rem;
+  margin-bottom: 20rem;
   transition: left 2s ease;
 }
 .hero {
@@ -36,16 +37,16 @@ body {
 }
 
 .header {
-  height: 100px;
+  height: 10rem;
   background-color: #fff;
   height: 100vh;
 }
 
 .header a {
   position: fixed;
-  top: 80px;
-  right: 80px;
-  font-size: 25px;
+  top: 8rem;
+  right: 8rem;
+  font-size: 2.5rem;
   font-weight: bolder;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -55,37 +56,39 @@ body {
 .home-word {
   color: red;
   position: relative;
-  right: -150px;
+  right: -15rem;
   transition: all 0.5s;
+  font-size: 2.5rem;
+
 }
 
 .projects {
   position: absolute;
   height: auto;
   width: 100%;
-  font-size: 100px;
-  margin-bottom: 50px;
+  font-size: 10rem;
+  margin-bottom: 5rem;
 }
 
 .works {
   display: flex;
   flex-direction: column;
   height: auto;
-  margin-bottom: 80px;
+  margin-bottom: 8rem;
 }
 
 .work-link:nth-child(5) {
-  padding-bottom: 100px;
+  padding-bottom: 10rem;
 }
 
 h2 {
-  font-size: 90px;
+  font-size: 9rem;
   width: 100%;
 }
 
 p {
   width: 100%;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: bold;
   align-items: justify;
 }
@@ -94,7 +97,7 @@ p {
   width: 50%;
   text-decoration: none;
   color: white;
-  margin-bottom: 70px;
+  margin-bottom: 7rem;
   transition: all 1s;
 }
 
@@ -107,7 +110,7 @@ p {
 }
 
 .left-side {
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
   width: 100%;
 }
 
@@ -123,19 +126,19 @@ p {
 }
 
 .detailed-info {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: normal;
   width: 50%;
-  margin-left: 100px;
+  margin-left: 10rem;
 }
 
 .work-title {
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .footer {
   opacity: 0;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .hidden {
@@ -143,7 +146,7 @@ p {
 }
 
 .react-projects {
-  margin-bottom: 100px;
+  margin-bottom: 10rem;
 }
 
 #react-heading {
@@ -153,14 +156,16 @@ p {
 
 p.footer--text {
   color: rgb(255, 0, 0);
-  font-size: 80px;
+  font-size: 8rem;
 }
 
 .git-hub__repository a {
+  width: 100%;
   font-weight: bold;
   text-decoration: none;
   color: white;
-  font-size: 25px;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .git-hub__repository a:hover {
@@ -169,8 +174,8 @@ p.footer--text {
 
 hr {
   position: relative;
-  top: 30px;
-  width: 0px;
+  top: 3rem;
+  width: 0;
   transition: width 2s ease;
 }
 
@@ -179,7 +184,7 @@ hr {
 }
 
 .footer-hr {
-  top: -50px;
+  top: -5rem;
   width: 70vw;
   margin: auto;
 }
