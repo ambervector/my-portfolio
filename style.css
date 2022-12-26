@@ -9,7 +9,6 @@
 }
 
 body {
-
   height: 100vh;
   overflow: hidden;
   background-color: rgba(0, 0, 0);
@@ -47,6 +46,8 @@ a:nth-child(3) {
 a:hover {
   text-align: center;
   transform: translateX(2rem);
+  /* color: black;
+  background-color: white; */
 }
 
 .greeting,
@@ -63,15 +64,17 @@ a:hover {
 
 .image-side {
   margin-top: 5rem;
-  width: 40%;
-  border-radius: 5rem;
+  max-width: 40%;
+  padding-right: 1rem;
+  /* border-radius: 5rem; */
 }
 
 img {
   margin-top: 5rem;
-  height: 100rem;
-  width: 60rem;
-  border-radius: 30rem;
+  max-height: 90%;
+  width: 90%;
+  border-radius: 50%;
+  box-shadow: 0.5rem 0.2rem rgba(255, 0, 0, 0.329);
 }
 
 img:hover {
@@ -87,4 +90,10 @@ hr {
 
 .vertical-line {
   transform: rotate(90deg);
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 31.25%;
+  }
 }

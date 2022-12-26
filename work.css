@@ -188,3 +188,10 @@ hr {
   width: 70vw;
   margin: auto;
 }
+
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 31.25%;
+  }
+}
